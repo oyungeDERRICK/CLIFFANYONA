@@ -846,6 +846,99 @@
   }
   .btn-reset-login:hover{ background:var(--green-tint); }
   button:disabled{ opacity:.6; cursor:wait; }
+  .btn-copy-codes{
+    margin-left:auto;
+    padding:9px 16px;
+    background:#fff;
+    color:var(--green-deep);
+    border:1.5px solid var(--green-deep);
+    border-radius:20px;
+    font-size:0.84rem; font-weight:700;
+    cursor:pointer;
+  }
+  .btn-copy-codes:hover{ background:var(--green-tint); }
+  .table-toolbar .btn-add-member{ margin-left:0; }
+  .add-member-info{ width:100%; font-size:0.84rem; font-weight:600; color:var(--green-dark); }
+  .code-chip{
+    display:inline-block;
+    font-family:ui-monospace, Menlo, Consolas, monospace;
+    font-weight:700; letter-spacing:0.08em;
+    background:var(--gold-tint); color:var(--green-dark);
+    border:1px solid #F0D9AE; border-radius:4px;
+    padding:1px 7px;
+  }
+  .login-state{ font-size:0.76rem; color:var(--charcoal-soft); margin-bottom:6px; }
+
+  /* ---- funeral events ---- */
+  .funeral-toolbar{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:14px; }
+  .funeral-toolbar .btn-add-member{ margin-left:auto; }
+  #new-funeral-date{ flex:0 1 170px; }
+  #new-funeral-amount{ flex:0 1 200px; }
+  .funeral-events{ display:grid; grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); gap:12px; margin-bottom:22px; }
+  .funeral-events .proc-empty{ grid-column:1 / -1; }
+  .fe-card{
+    text-align:left; background:#fff;
+    border:1.5px solid var(--line); border-radius:6px;
+    padding:14px 16px; cursor:pointer;
+    display:flex; flex-direction:column; gap:4px;
+    font-family:inherit; color:inherit;
+    transition:border-color .15s ease, box-shadow .15s ease;
+  }
+  .fe-card:hover{ border-color:var(--green-deep); }
+  .fe-card.active{ border-color:var(--green-deep); box-shadow:0 0 0 3px var(--green-tint); background:#FCFEFC; }
+  .fe-name{ font-family:'Spectral', serif; font-weight:700; font-size:1rem; color:var(--green-dark); }
+  .fe-date{ font-size:0.78rem; color:var(--charcoal-soft); }
+  .fe-meta{ font-size:0.82rem; margin-top:4px; }
+  .fe-paid{ color:var(--green-deep); }
+  .fe-unpaid{ color:var(--error); }
+  .fe-total{ font-size:0.8rem; color:var(--charcoal-soft); }
+  .funeral-detail{ background:#fff; border:1px solid var(--line); border-radius:6px; padding:22px 24px 0; overflow:hidden; }
+  .fd-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:16px; }
+  .fd-head h3{ font-size:1.3rem; margin-top:8px; }
+  .fd-head p{ margin:4px 0 0; font-size:0.88rem; color:var(--charcoal-soft); }
+  .fd-mine{
+    background:var(--green-tint); border:1px solid #CFE3D4; border-radius:6px;
+    padding:14px 16px; margin-bottom:16px;
+  }
+  .fd-mine-title{ font-size:0.74rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--green-deep); margin-bottom:8px; }
+  .fd-mine-grid{ display:flex; flex-wrap:wrap; gap:10px 28px; align-items:center; }
+  .fd-mine-grid span.k{ display:block; font-size:0.74rem; color:var(--charcoal-soft); }
+  .fd-mine-grid b{ font-family:'Spectral', serif; font-size:1.2rem; color:var(--green-dark); }
+  .fd-due-row{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:16px; font-size:0.88rem; font-weight:600; }
+  .fd-stats{ display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin-bottom:18px; }
+  .fd-stat{ border:1px solid var(--line); border-radius:6px; padding:12px 14px; background:#FCFAF4; }
+  .fd-stat .n{ font-family:'Spectral', serif; font-weight:700; font-size:1.4rem; }
+  .fd-stat.paid .n{ color:var(--green-deep); }
+  .fd-stat.unpaid .n{ color:var(--error); }
+  .fd-stat.total .n{ color:var(--green-dark); }
+  .fd-stat.rem .n{ color:#9A6B12; }
+  .fd-stat .l{ font-size:0.76rem; color:var(--charcoal-soft); }
+  .fd-tools{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:14px; }
+  .fd-tools .fd-search{ flex:1 1 220px; max-width:320px; }
+  .fd-filter{ display:flex; gap:6px; flex-wrap:wrap; }
+  .fd-chip{
+    padding:7px 12px; background:#fff; color:var(--charcoal-soft);
+    border:1.5px solid var(--line); border-radius:20px;
+    font-size:0.8rem; font-weight:700; cursor:pointer; font-family:inherit;
+  }
+  .fd-chip span{ font-weight:600; opacity:.8; margin-left:2px; }
+  .fd-chip:hover{ border-color:var(--green-deep); color:var(--green-deep); }
+  .fd-chip.active{ background:var(--green-deep); border-color:var(--green-deep); color:#fff; }
+  .fd-amt{ display:flex; align-items:center; gap:6px; }
+  .fd-amt input{
+    width:110px; padding:7px 9px;
+    border:1.5px solid var(--line); border-radius:4px;
+    font-family:inherit; font-size:0.9rem; color:var(--charcoal); background:#fff;
+  }
+  .fd-amt input:focus{ outline:none; border-color:var(--green-deep); box-shadow:0 0 0 3px var(--green-tint); }
+  table.fd-table{ min-width:600px; }
+  table.fd-table .fd-rem{ font-weight:700; color:#9A6B12; }
+  table.fd-table .fd-rem.zero{ color:var(--green-deep); }
+  .funeral-detail .table-scroll{ border:1px solid var(--line); border-radius:6px; }
+  .funeral-detail .pager{ margin-top:0; }
+  .funeral-detail .dash-footer{ margin:16px -24px 0; }
+  @media (max-width: 860px){ .fd-stats{ grid-template-columns:repeat(2, 1fr); } }
+  @media (max-width: 480px){ .funeral-detail{ padding:18px 14px 0; } .funeral-detail .dash-footer{ margin:16px -14px 0; } }
 </style>
 </head>
 <body>
@@ -937,7 +1030,7 @@
       <section id="view-activate" class="view">
         <span class="eyebrow-tag">First-time login</span>
         <h2>Set your password</h2>
-        <p class="lede">The admin must have added you to the group first. Enter your full name and the ID number the admin registered for you, then choose a password.</p>
+        <p class="lede">The admin must have added you to the group first. Enter your full name and either your ID number or the setup code the admin gave you, then choose a password.</p>
 
         <div class="form-banner" id="activate-banner"></div>
 
@@ -948,9 +1041,9 @@
             <div class="error-msg">Enter your full name.</div>
           </div>
           <div class="field" id="activate-id-field">
-            <label for="activate-id">ID number</label>
-            <input type="text" id="activate-id" inputmode="numeric" autocomplete="off" placeholder="Your national ID number">
-            <div class="error-msg">Enter your ID number.</div>
+            <label for="activate-id">ID number or setup code</label>
+            <input type="text" id="activate-id" inputmode="numeric" autocomplete="off" placeholder="ID number, or the code from the admin">
+            <div class="error-msg">Enter your ID number or the setup code from the admin.</div>
           </div>
           <div class="field" id="activate-password-field">
             <label for="activate-password">Create password</label>
@@ -1008,14 +1101,16 @@
           <input type="text" id="member-search" placeholder="Search members by name&hellip;">
         </div>
         <div class="member-count" id="member-count">0 members</div>
+        <button type="button" class="btn-copy-codes hidden" id="copy-codes-btn">Copy login codes</button>
         <button type="button" class="btn-add-member hidden" id="show-add-member-btn">+ Add member</button>
       </div>
 
       <div class="add-member-bar hidden" id="add-member-bar">
         <input type="text" id="new-member-name" placeholder="Full name of new member">
-        <input type="text" id="new-member-id" inputmode="numeric" placeholder="ID number">
+        <input type="text" id="new-member-id" inputmode="numeric" placeholder="ID number (optional)">
         <button type="button" class="btn-primary-sm" id="confirm-add-member-btn">Add</button>
-        <button type="button" class="btn-cancel-sm" id="cancel-add-member-btn">Cancel</button>
+        <button type="button" class="btn-cancel-sm" id="cancel-add-member-btn">Close</button>
+        <span class="add-member-info hidden" id="add-member-info"></span>
         <span class="add-member-error hidden" id="add-member-error">Enter a name that isn't already on the roster.</span>
       </div>
 
@@ -1381,6 +1476,82 @@
 
       </div>
     </div>
+    <!-- ================= FUNERAL EVENTS VIEW ================= -->
+    <div class="funeral-view hidden" id="funeral-view">
+      <div class="table-toast" id="funeral-toast"></div>
+      <div class="funeral-toolbar">
+        <div class="member-count" id="funeral-count">0 funeral events</div>
+        <button type="button" class="btn-add-member hidden" id="show-add-funeral-btn">+ Add funeral event</button>
+      </div>
+
+      <div class="add-member-bar hidden" id="add-funeral-bar">
+        <input type="text" id="new-funeral-name" list="funeral-name-list" placeholder="Name of the deceased">
+        <datalist id="funeral-name-list"></datalist>
+        <input type="date" id="new-funeral-date" title="Funeral date">
+        <input type="number" id="new-funeral-amount" min="0" step="1" placeholder="Amount per member (KSh)">
+        <input type="text" id="new-funeral-notes" maxlength="300" placeholder="Note (optional)">
+        <button type="button" class="btn-primary-sm" id="confirm-add-funeral-btn">Add event</button>
+        <button type="button" class="btn-cancel-sm" id="cancel-add-funeral-btn">Close</button>
+        <span class="add-member-error hidden" id="add-funeral-error"></span>
+      </div>
+
+      <div class="funeral-events" id="funeral-events"></div>
+
+      <div class="funeral-detail hidden" id="funeral-detail">
+        <div class="fd-head">
+          <div>
+            <span class="dash-tag">Funeral</span>
+            <h3 id="fd-title">Funeral</h3>
+            <p id="fd-sub"></p>
+          </div>
+          <button type="button" class="btn-remove-member hidden" id="fd-delete-btn">Delete event</button>
+        </div>
+
+        <div class="fd-mine hidden" id="fd-mine"></div>
+
+        <div class="fd-due-row hidden" id="fd-due-row">
+          <label for="fd-due">Contribution per member</label>
+          <span class="fd-amt"><span class="cell-currency">KSh</span><input type="number" id="fd-due" min="0" step="1"></span>
+        </div>
+
+        <div class="fd-stats">
+          <div class="fd-stat paid"><div class="n" id="fd-cleared">0</div><div class="l">Fully paid</div></div>
+          <div class="fd-stat unpaid"><div class="n" id="fd-owing">0</div><div class="l">Still owing</div></div>
+          <div class="fd-stat total"><div class="n" id="fd-collected">KSh 0</div><div class="l">Collected</div></div>
+          <div class="fd-stat rem"><div class="n" id="fd-remaining">KSh 0</div><div class="l">Still to collect</div></div>
+        </div>
+
+        <div class="fd-tools">
+          <div class="search-wrap fd-search">
+            <input type="text" id="fd-search" placeholder="Search members by name&hellip;">
+          </div>
+          <div class="fd-filter" role="group" aria-label="Show">
+            <button type="button" class="fd-chip active" data-filter="all">All <span id="fd-n-all">0</span></button>
+            <button type="button" class="fd-chip" data-filter="paid">Fully paid <span id="fd-n-paid">0</span></button>
+            <button type="button" class="fd-chip" data-filter="owing">Owing <span id="fd-n-owing">0</span></button>
+          </div>
+        </div>
+
+        <div class="table-scroll">
+          <table class="records fd-table">
+            <thead>
+              <tr><th class="th-no">#</th><th>Member</th><th>Contribution</th><th>Paid</th><th>Remaining</th><th>Status</th></tr>
+            </thead>
+            <tbody id="fd-body"></tbody>
+          </table>
+        </div>
+        <div class="pager hidden" id="fd-more-wrap">
+          <span class="pager-info" id="fd-more-info"></span>
+          <button type="button" class="btn-cancel-sm" id="fd-more-btn">Show more</button>
+        </div>
+
+        <div class="dash-footer hidden" id="fd-footer">
+          <span class="dash-footer-note">Type the total a member has paid so far, then press Save. Remaining updates for everyone as you save.</span>
+          <button type="button" class="btn-save" id="fd-save-btn">Save changes</button>
+        </div>
+      </div>
+    </div>
+
     <!-- ================= WEEKLY MEETING PROCEEDINGS ================= -->
     <section class="proc-card hidden" id="proceedings-panel">
       <div class="proc-head">
@@ -1485,15 +1656,8 @@
       columns: FIN_COLUMNS, defaults: finDefaults
     },
     {
-      key: 'funeralEvents', label: 'Funeral Events', tag: 'Funeral Events', proceedings: true,
-      title: 'Funeral Events', desc: 'Funeral events the group has responded to.',
-      columns: [
-        { key: 'eventName', label: 'Deceased / event', type: 'text', placeholder: 'Name of the deceased' },
-        { key: 'eventDate', label: 'Event date', type: 'date' },
-        { key: 'amount', label: 'Amount contributed', type: 'currency' },
-        { key: 'status', label: 'Status', type: 'select', options: STATUS_PAID }
-      ],
-      defaults: function(){ return { eventName: '', eventDate: '', amount: 0, status: 'pending' }; }
+      key: 'funeralEvents', label: 'Funeral Events', tag: 'Funeral Events', proceedings: true, type: 'funeral',
+      title: 'Funeral Events', desc: 'Tap a funeral to see what every member has paid for it and what is still owed.'
     },
     {
       key: 'funeralContrib', label: 'Funeral Contributions', tag: 'Funeral Contributions', proceedings: true,
@@ -1544,6 +1708,13 @@
   var renderSeq = 0;
   var addMemberBar = $('add-member-bar');
 
+  // A member opens the register on the page that holds their own row; the admin starts on page 1.
+  function homePage(){
+    if(!me || me.is_admin) return 0;
+    for(var i = 0; i < roster.length; i++){ if(roster[i].id === me.id) return Math.floor(i / PAGE_SIZE); }
+    return 0;
+  }
+
   /* ---------- TALKING TO THE DATABASE ---------- */
   function isConfigured(){
     return SUPABASE_URL.indexOf('PASTE_') === -1 && SUPABASE_KEY.indexOf('PASTE_') === -1 && /^https?:\/\//.test(SUPABASE_URL);
@@ -1587,14 +1758,15 @@
     b.textContent = busy ? 'Please wait\u2026' : b.getAttribute('data-label');
   }
   var toastTimer = null;
-  function showToast(message, type){
-    var t = $('table-toast');
+  function toastEl(){ return $(findTableDef(activeTableKey).type === 'funeral' ? 'funeral-toast' : 'table-toast'); }
+  function showToast(message, type, ms){
+    var t = toastEl();
     t.textContent = message;
     t.className = 'table-toast show' + (type === 'error' ? ' error' : '');
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(function(){ t.classList.remove('show'); }, type === 'error' ? 7000 : 2200);
+    toastTimer = setTimeout(function(){ t.classList.remove('show'); }, ms || (type === 'error' ? 7000 : 2200));
   }
-  function hideToast(){ $('table-toast').classList.remove('show'); }
+  function hideToast(){ $('table-toast').classList.remove('show'); $('funeral-toast').classList.remove('show'); }
 
   /* ---------- AUTH: VIEWS + ROLE SWITCH ---------- */
   var views = { login: $('view-login'), activate: $('view-activate') };
@@ -1703,15 +1875,20 @@
     recordsCache = {};
     procsCache = {};
     roster = [];
+    funeralEvents = null;
+    funeralDetails = {};
+    selectedEventId = null;
     activeTableKey = TABLE_DEFS[0].key;
     $('auth-shell').classList.add('hidden');
     $('boot-loading').classList.add('hidden');
     $('dashboard-shell').classList.remove('hidden');
     $('dash-who').innerHTML = esc(me.name) + (me.is_admin ? ' <span class="admin-tag">Admin</span>' : '');
     $('show-add-member-btn').classList.toggle('hidden', !me.is_admin);
+    $('copy-codes-btn').classList.toggle('hidden', !me.is_admin);
     addMemberBar.classList.add('hidden');
     buildTabStrip();
     await loadRoster();
+    pageIndex = homePage();
     await renderActiveTable();
   }
 
@@ -1766,10 +1943,15 @@
         if(!flushed.ok) return;
         activeTableKey = def.key;
         searchTerm = '';
-        pageIndex = 0;
         $('member-search').value = '';
         addMemberBar.classList.add('hidden');
+        // opening a tab always shows fresh data (new members, payments and updates by the admin)
+        delete recordsCache[def.key];
+        delete procsCache[def.key];
+        if(def.type === 'funeral'){ funeralEvents = null; funeralDetails = {}; resetFuneralView(); }
         buildTabStrip();
+        await loadRoster();
+        pageIndex = homePage();
         renderActiveTable();
       });
       strip.appendChild(btn);
@@ -1785,7 +1967,7 @@
       var flushed = await collectAndSave(findTableDef(activeTableKey));
       if(!flushed.ok) return;
       searchTerm = value;
-      pageIndex = 0;
+      pageIndex = value.trim() ? 0 : homePage();
       renderActiveTable();
     }, 200);
   });
@@ -1795,6 +1977,7 @@
     if(!me || !me.is_admin) return;
     addMemberBar.classList.remove('hidden');
     $('add-member-error').classList.add('hidden');
+    $('add-member-info').classList.add('hidden');
     $('new-member-name').value = '';
     $('new-member-id').value = '';
     $('new-member-name').focus();
@@ -1817,12 +2000,44 @@
       return;
     }
     err.classList.add('hidden');
-    addMemberBar.classList.add('hidden');
+    var info = $('add-member-info');
+    info.textContent = 'Added ' + res.name + '. Setup code: ' + res.code +
+      ' \u2014 give it to the member to use on \u201cSet your password\u201d. You can add another member below.';
+    info.classList.remove('hidden');
+    $('new-member-name').value = '';
+    $('new-member-id').value = '';
+    $('new-member-name').focus();
     searchTerm = '';
     $('member-search').value = '';
     await loadRoster();
     pageIndex = Math.floor((roster.length - 1) / PAGE_SIZE);
     renderActiveTable();
+  });
+
+  /* ---------- COPY LOGIN CODES (admin only) ---------- */
+  $('copy-codes-btn').addEventListener('click', async function(){
+    if(!me || !me.is_admin) return;
+    await loadRoster();
+    var lines = roster.filter(function(m){ return !m.is_admin && !m.has_password && m.setup_code; })
+      .map(function(m){ return m.name + ' - ' + m.setup_code; });
+    if(!lines.length){ showToast('Everyone already has a login set.', 'ok'); return; }
+    var text = 'MWAMOGESA KONYANA - login setup codes\n' +
+      '(On the login page choose \u201cSet your password\u201d and enter your name and your code)\n\n' + lines.join('\n');
+    var copied = false;
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){ await navigator.clipboard.writeText(text); copied = true; }
+    }catch(e){}
+    if(!copied){
+      try{
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        copied = document.execCommand('copy');
+        document.body.removeChild(ta);
+      }catch(e){}
+    }
+    if(copied){ showToast('Copied ' + lines.length + ' login codes. Paste them into WhatsApp or a document.', 'ok', 6000); }
+    else { window.prompt('Copy these login codes (Ctrl+C):', text); }
   });
 
   /* ---------- PAGER ---------- */
@@ -1848,10 +2063,13 @@
     hideToast();
 
     var isDoc = def.type === 'document';
-    $('table-view-wrap').classList.toggle('hidden', isDoc);
+    var isFun = def.type === 'funeral';
+    $('table-view-wrap').classList.toggle('hidden', isDoc || isFun);
     $('constitution-view').classList.toggle('hidden', !isDoc);
+    $('funeral-view').classList.toggle('hidden', !isFun);
     renderProceedings(def);
     if(isDoc) return;
+    if(isFun){ await renderFuneral(seq); return; }
 
     if(!recordsCache[def.key]){
       $('records-head').innerHTML = '';
@@ -1925,7 +2143,10 @@
         if(m.is_admin){
           html += '<td><span class="cell-static muted">Admin</span></td>';
         } else {
-          html += '<td><div class="row-actions">' +
+          var loginState = m.has_password
+            ? 'Login set'
+            : (m.setup_code ? 'Setup code <span class="code-chip">' + esc(m.setup_code) + '</span>' : 'No code \u2014 press Reset login');
+          html += '<td><div class="login-state">' + loginState + '</div><div class="row-actions">' +
             '<button type="button" class="btn-reset-login" data-reset-id="' + esc(m.id) + '" data-member-name="' + esc(m.name) + '">Reset login</button>' +
             '<button type="button" class="btn-remove-member" data-remove-id="' + esc(m.id) + '" data-member-name="' + esc(m.name) + '">Remove</button>' +
             '</div></td>';
@@ -1965,7 +2186,9 @@
         if(!window.confirm('Reset the login for ' + name + '? They will choose a new password using \u201cSet your password\u201d.')) return;
         var res = await call('mk_reset_login', { p_token: token, p_member_id: btn.getAttribute('data-reset-id') });
         if(!res.ok){ showToast(res.error, 'error'); return; }
-        showToast('Login reset. ' + name + ' can now set a new password.', 'ok');
+        await loadRoster();
+        await renderActiveTable();
+        showToast('Login reset for ' + name + '. New setup code: ' + res.code, 'ok', 15000);
       });
     });
 
@@ -2033,6 +2256,7 @@
   }
 
   async function doCollectAndSave(def){
+    if(def && def.type === 'funeral') return funeralCollect();
     if(!def || !def.columns || !token) return { ok: true, saved: 0 };
     var cache = recordsCache[def.key];
     if(!cache) return { ok: true, saved: 0 };
@@ -2068,6 +2292,356 @@
     if(!r.ok) return;
     await renderActiveTable();
     showToast(r.saved ? 'Changes saved.' : 'Nothing new to save.', 'ok');
+  });
+
+  /* ---------- FUNERAL EVENTS ---------- */
+  // Each funeral has a contribution per member. Every member on the register is listed under it with
+  // what they have paid and what is still owed. The admin updates payments as members keep paying.
+  var funeralEvents = null;      // events with their totals
+  var funeralDetails = {};       // eventId -> { event, payments: { memberId: totalPaid } }
+  var selectedEventId = null;
+  var fdSearch = '';
+  var fdFilter = 'all';          // all | paid | owing
+  var fdLimit = 50;
+
+  function money(n){ return 'KSh ' + Number(n || 0).toLocaleString(); }
+  function resetFuneralView(){
+    fdSearch = ''; $('fd-search').value = '';
+    fdFilter = 'all'; fdLimit = 50;
+  }
+
+  async function loadFuneralEvents(){
+    var r = await call('mk_funeral_events', { p_token: token });
+    if(r.ok){ funeralEvents = r.events || []; }
+    return r;
+  }
+
+  async function renderFuneral(seq){
+    var cards = $('funeral-events');
+    $('show-add-funeral-btn').classList.toggle('hidden', !(me && me.is_admin));
+    if(!funeralEvents){
+      cards.innerHTML = '<p class="proc-empty">Loading\u2026</p>';
+      $('funeral-detail').classList.add('hidden');
+      var r = await loadFuneralEvents();
+      if(seq !== renderSeq) return;
+      if(!r.ok){ cards.innerHTML = '<p class="proc-empty">' + esc(r.error) + '</p>'; return; }
+    }
+    if(!funeralEvents.some(function(e){ return e.id === selectedEventId; })){
+      selectedEventId = funeralEvents.length ? funeralEvents[0].id : null;
+    }
+    drawFuneralCards();
+    if(!selectedEventId){ $('funeral-detail').classList.add('hidden'); return; }
+    if(!funeralDetails[selectedEventId]){
+      var wanted = selectedEventId;
+      var d = await call('mk_funeral_detail', { p_token: token, p_event_id: wanted });
+      if(seq !== renderSeq || wanted !== selectedEventId) return;
+      if(!d.ok){ showToast(d.error, 'error'); return; }
+      funeralDetails[wanted] = d;
+    }
+    drawFuneralDetail();
+  }
+
+  function drawFuneralCards(){
+    var list = funeralEvents || [];
+    var admin = !!(me && me.is_admin);
+    $('funeral-count').textContent = list.length + (list.length === 1 ? ' funeral event' : ' funeral events');
+    var box = $('funeral-events');
+    if(!list.length){
+      box.innerHTML = '<p class="proc-empty">' + (admin
+        ? 'No funeral events yet. Use \u201c+ Add funeral event\u201d to record one \u2014 every member will be listed under it.'
+        : 'No funeral events have been recorded yet.') + '</p>';
+      return;
+    }
+    box.innerHTML = list.map(function(e){
+      var owing = Math.max(0, (e.eligible || 0) - (e.cleared || 0));
+      return '<button type="button" class="fe-card' + (e.id === selectedEventId ? ' active' : '') + '" data-event="' + esc(e.id) + '">' +
+        '<span class="fe-name">' + esc(e.deceased) + (e.deceased_member_id ? ' <span class="you-tag">Member</span>' : '') + '</span>' +
+        '<span class="fe-date">' + esc(formatWeek(e.event_date)) + ' \u00b7 ' + money(e.amount_due) + ' each</span>' +
+        '<span class="fe-meta"><b class="fe-paid">' + (e.cleared || 0) + ' fully paid</b> \u00b7 <b class="fe-unpaid">' + owing + ' owing</b></span>' +
+        '<span class="fe-total">' + money(e.paid_total) + ' collected \u00b7 ' + money(e.remaining_total) + ' to collect</span></button>';
+    }).join('');
+  }
+
+  // one row per member (except the deceased, if they were a member)
+  function fdRowData(d){
+    var ev = d.event, pay = d.payments || {}, due = Number(ev.amount_due || 0), rows = [], no = 0;
+    roster.forEach(function(m){
+      if(m.id === ev.deceased_member_id) return;
+      no++;
+      var paid = Number(pay[m.id] || 0);
+      rows.push({ m: m, no: no, paid: paid, rem: Math.max(0, due - paid), status: fdStatus(paid, due) });
+    });
+    return rows;
+  }
+  function fdStatus(paid, due){
+    if(paid > 0 && paid >= due) return 'paid';
+    return paid > 0 ? 'partial' : 'none';
+  }
+  var FD_PILL = {
+    paid:    { cls: 'st-a', label: 'Fully paid' },
+    partial: { cls: 'st-b', label: 'Partly paid' },
+    none:    { cls: 'st-c', label: 'Not paid' }
+  };
+
+  function drawFuneralDetail(){
+    var d = funeralDetails[selectedEventId];
+    var box = $('funeral-detail');
+    if(!d){ box.classList.add('hidden'); return; }
+    var admin = !!(me && me.is_admin);
+    var ev = d.event, due = Number(ev.amount_due || 0);
+    box.classList.remove('hidden');
+    $('fd-title').textContent = 'Funeral of ' + ev.deceased;
+    $('fd-sub').textContent = formatWeek(ev.event_date) + ' \u2014 ' +
+      (due > 0 ? money(due) + ' per member' : 'no contribution amount set yet') + (ev.notes ? ' \u2014 ' + ev.notes : '');
+    $('fd-delete-btn').classList.toggle('hidden', !admin);
+    $('fd-due-row').classList.toggle('hidden', !admin);
+    $('fd-footer').classList.toggle('hidden', !admin);
+    if(admin) $('fd-due').value = due;
+
+    var rows = fdRowData(d);
+    var cleared = 0, collected = 0, remaining = 0;
+    rows.forEach(function(r){ if(r.status === 'paid') cleared++; collected += r.paid; remaining += r.rem; });
+    $('fd-cleared').textContent = cleared;
+    $('fd-owing').textContent = rows.length - cleared;
+    $('fd-collected').textContent = money(collected);
+    $('fd-remaining').textContent = money(remaining);
+    $('fd-n-all').textContent = rows.length;
+    $('fd-n-paid').textContent = cleared;
+    $('fd-n-owing').textContent = rows.length - cleared;
+    document.querySelectorAll('.fd-chip').forEach(function(c){ c.classList.toggle('active', c.getAttribute('data-filter') === fdFilter); });
+
+    // the signed-in member's own contribution, so they don't have to hunt for their row
+    var mine = rows.filter(function(r){ return me && r.m.id === me.id; })[0];
+    var mineBox = $('fd-mine');
+    if(mine){
+      var pill = FD_PILL[mine.status];
+      mineBox.classList.remove('hidden');
+      mineBox.innerHTML = '<div class="fd-mine-title">Your contribution to this funeral</div><div class="fd-mine-grid">' +
+        '<div><span class="k">Contribution</span><b>' + money(due) + '</b></div>' +
+        '<div><span class="k">You have paid</span><b>' + money(mine.paid) + '</b></div>' +
+        '<div><span class="k">Remaining</span><b>' + money(mine.rem) + '</b></div>' +
+        '<span class="status-pill ' + pill.cls + '">' + pill.label + '</span></div>';
+    } else {
+      mineBox.classList.add('hidden');
+    }
+
+    var term = fdSearch.trim().toLowerCase();
+    var shown = rows.filter(function(r){
+      if(term && r.m.name.toLowerCase().indexOf(term) === -1) return false;
+      if(fdFilter === 'paid') return r.status === 'paid';
+      if(fdFilter === 'owing') return r.status !== 'paid';
+      return true;
+    });
+    var html = '';
+    if(!shown.length){
+      html = '<tr><td colspan="6" class="no-results">' + (rows.length ? 'No members match.' : 'No members on the register yet.') + '</td></tr>';
+    }
+    shown.slice(0, fdLimit).forEach(function(r){
+      var isOwn = me && r.m.id === me.id;
+      var pill = FD_PILL[r.status];
+      var paidCell = admin
+        ? '<div class="cell-input-wrap"><span class="cell-currency">KSh</span><input type="number" min="0" step="1" data-fm="' + esc(r.m.id) + '" data-orig="' + r.paid + '" value="' + (r.paid || '') + '" placeholder="0"></div>'
+        : money(r.paid);
+      html += '<tr data-mid="' + esc(r.m.id) + '" data-paid="' + r.paid + '"' + (isOwn ? ' class="own-row"' : '') + '>' +
+        '<td class="slot-no">' + r.no + '</td>' +
+        '<td class="member-cell">' + esc(r.m.name) + (isOwn ? ' <span class="you-tag">You</span>' : '') + '</td>' +
+        '<td class="fd-cont">' + money(due) + '</td>' +
+        '<td>' + paidCell + '</td>' +
+        '<td class="fd-rem' + (r.rem === 0 ? ' zero' : '') + '">' + money(r.rem) + '</td>' +
+        '<td class="fd-status"><span class="status-pill ' + pill.cls + '">' + pill.label + '</span></td></tr>';
+    });
+    $('fd-body').innerHTML = html;
+
+    var more = $('fd-more-wrap');
+    if(shown.length > fdLimit){
+      more.classList.remove('hidden');
+      $('fd-more-info').textContent = 'Showing ' + Math.min(fdLimit, shown.length) + ' of ' + shown.length + ' members';
+    } else {
+      more.classList.add('hidden');
+    }
+  }
+
+  // while the admin types, update that row's Remaining and Status straight away
+  function fdLiveUpdate(){
+    var d = funeralDetails[selectedEventId];
+    if(!d) return;
+    var admin = !!(me && me.is_admin);
+    var dueInput = $('fd-due');
+    var due = Number((admin && dueInput.value !== '') ? dueInput.value : d.event.amount_due) || 0;
+    document.querySelectorAll('#fd-body tr[data-mid]').forEach(function(tr){
+      var inp = tr.querySelector('input[data-fm]');
+      var paid = inp ? (Number(inp.value) || 0) : Number(tr.getAttribute('data-paid') || 0);
+      var rem = Math.max(0, due - paid);
+      var pill = FD_PILL[fdStatus(paid, due)];
+      tr.querySelector('.fd-cont').textContent = money(due);
+      var remCell = tr.querySelector('.fd-rem');
+      remCell.textContent = money(rem);
+      remCell.className = 'fd-rem' + (rem === 0 ? ' zero' : '');
+      tr.querySelector('.fd-status').innerHTML = '<span class="status-pill ' + pill.cls + '">' + pill.label + '</span>';
+    });
+  }
+  $('fd-body').addEventListener('input', function(e){ if(e.target.closest('[data-fm]')) fdLiveUpdate(); });
+  $('fd-due').addEventListener('input', fdLiveUpdate);
+
+  // Saves what the admin typed (used by Save and by "save before you leave")
+  async function funeralCollect(){
+    if(!me || !me.is_admin || !selectedEventId || !funeralDetails[selectedEventId]) return { ok: true, saved: 0 };
+    var eventId = selectedEventId;
+    var d = funeralDetails[eventId];
+    var saved = 0;
+
+    // 1. the contribution per member
+    var dueText = $('fd-due').value.trim();
+    var newDue = Number(dueText);
+    var oldDue = Number(d.event.amount_due || 0);
+    if(!$('fd-due-row').classList.contains('hidden') && dueText !== '' && !isNaN(newDue) && newDue !== oldDue){
+      var u = await call('mk_update_funeral', { p_token: token, p_event_id: eventId, p_amount_due: newDue });
+      if(!u.ok){ showToast(u.error, 'error'); return { ok: false, saved: 0 }; }
+      d.event.amount_due = newDue;
+      saved++;
+    }
+
+    // 2. what each member has paid
+    var inputs = document.querySelectorAll('#fd-body [data-fm]');
+    var changes = {}, count = 0;
+    inputs.forEach(function(inp){
+      var id = inp.getAttribute('data-fm');
+      var orig = Number(inp.getAttribute('data-orig') || 0);
+      var now = Number(inp.value) || 0;
+      if(now !== orig){ changes[id] = now; count++; }
+    });
+    if(count){
+      var r = await call('mk_save_funeral_payments', { p_token: token, p_event_id: eventId, p_changes: changes });
+      if(!r.ok){ showToast(r.error, 'error'); return { ok: false, saved: saved }; }
+      var pay = d.payments || (d.payments = {});
+      Object.keys(changes).forEach(function(id){ if(changes[id] > 0) pay[id] = changes[id]; else delete pay[id]; });
+      inputs.forEach(function(inp){
+        var id = inp.getAttribute('data-fm');
+        if(Object.prototype.hasOwnProperty.call(changes, id)) inp.setAttribute('data-orig', String(changes[id]));
+      });
+      saved += count;
+    }
+    return { ok: true, saved: saved };
+  }
+
+  async function saveFuneralNow(){
+    var r = await collectAndSave(findTableDef('funeralEvents'));
+    if(!r.ok) return;
+    if(!r.saved){ showToast('Nothing new to save.', 'ok'); return; }
+    await loadFuneralEvents();
+    drawFuneralCards();
+    drawFuneralDetail();
+    showToast('Saved. Everyone can now see the updated amounts.', 'ok');
+  }
+  $('fd-save-btn').addEventListener('click', saveFuneralNow);
+
+  // pick an event
+  $('funeral-events').addEventListener('click', async function(e){
+    var btn = e.target.closest('[data-event]');
+    if(!btn) return;
+    var id = btn.getAttribute('data-event');
+    if(id === selectedEventId) return;
+    var f = await collectAndSave(findTableDef('funeralEvents'));
+    if(!f.ok) return;
+    selectedEventId = id;
+    resetFuneralView();
+    if(f.saved){ await loadFuneralEvents(); }
+    drawFuneralCards();
+    if(!funeralDetails[id]){
+      var d = await call('mk_funeral_detail', { p_token: token, p_event_id: id });
+      if(!d.ok){ showToast(d.error, 'error'); return; }
+      funeralDetails[id] = d;
+    }
+    if(selectedEventId === id) drawFuneralDetail();
+  });
+
+  // filter chips and "Show more"
+  document.querySelectorAll('.fd-chip').forEach(function(chip){
+    chip.addEventListener('click', async function(){
+      var f = await collectAndSave(findTableDef('funeralEvents'));
+      if(!f.ok) return;
+      fdFilter = chip.getAttribute('data-filter');
+      fdLimit = 50;
+      if(f.saved){ await loadFuneralEvents(); drawFuneralCards(); }
+      drawFuneralDetail();
+    });
+  });
+  $('fd-more-btn').addEventListener('click', async function(){
+    var f = await collectAndSave(findTableDef('funeralEvents'));
+    if(!f.ok) return;
+    fdLimit += 50;
+    drawFuneralDetail();
+  });
+
+  var fdSearchTimer = null;
+  $('fd-search').addEventListener('input', function(e){
+    var value = e.target.value;
+    clearTimeout(fdSearchTimer);
+    fdSearchTimer = setTimeout(async function(){
+      var f = await collectAndSave(findTableDef('funeralEvents'));
+      if(!f.ok) return;
+      fdSearch = value;
+      fdLimit = 50;
+      if(f.saved){ await loadFuneralEvents(); drawFuneralCards(); }
+      drawFuneralDetail();
+    }, 250);
+  });
+
+  // add / delete an event (admin only)
+  $('show-add-funeral-btn').addEventListener('click', function(){
+    if(!me || !me.is_admin) return;
+    $('funeral-name-list').innerHTML = roster.map(function(m){ return '<option value="' + esc(m.name) + '">'; }).join('');
+    $('add-funeral-error').classList.add('hidden');
+    $('new-funeral-name').value = '';
+    $('new-funeral-notes').value = '';
+    $('new-funeral-amount').value = '';
+    $('new-funeral-date').value = todayIso();
+    $('add-funeral-bar').classList.remove('hidden');
+    $('new-funeral-name').focus();
+  });
+  $('cancel-add-funeral-btn').addEventListener('click', function(){ $('add-funeral-bar').classList.add('hidden'); });
+  $('confirm-add-funeral-btn').addEventListener('click', async function(){
+    if(!me || !me.is_admin) return;
+    var err = $('add-funeral-error');
+    var name = $('new-funeral-name').value.trim().replace(/\s+/g, ' ');
+    var date = $('new-funeral-date').value;
+    var amount = Number($('new-funeral-amount').value);
+    var notes = $('new-funeral-notes').value.trim();
+    function bad(msg){ err.textContent = msg; err.classList.remove('hidden'); }
+    if(name.length < 2){ bad('Enter the name of the deceased.'); return; }
+    if(!date){ bad('Choose the funeral date.'); return; }
+    if(!(amount > 0)){ bad('Enter the amount each member should contribute (more than 0).'); return; }
+    var f = await collectAndSave(findTableDef('funeralEvents'));
+    if(!f.ok) return;
+    // if the deceased is a member on the register, link them so they are left out of the contribution list
+    var key = name.toLowerCase();
+    var match = roster.filter(function(m){ return m.name.toLowerCase() === key; })[0];
+    var btn = $('confirm-add-funeral-btn');
+    btn.disabled = true;
+    var res = await call('mk_add_funeral', { p_token: token, p_deceased: match ? match.name : name, p_date: date, p_notes: notes,
+                                             p_deceased_member_id: match ? match.id : null, p_amount_due: amount });
+    btn.disabled = false;
+    if(!res.ok){ bad(res.error); return; }
+    err.classList.add('hidden');
+    $('add-funeral-bar').classList.add('hidden');
+    selectedEventId = res.id;
+    funeralEvents = null;
+    resetFuneralView();
+    await loadRoster();
+    await renderActiveTable();
+    showToast('Funeral event added. Every member is now listed \u2014 record payments as they come in.', 'ok', 6000);
+  });
+  $('fd-delete-btn').addEventListener('click', async function(){
+    if(!me || !me.is_admin || !selectedEventId || !funeralDetails[selectedEventId]) return;
+    var d = funeralDetails[selectedEventId];
+    if(!window.confirm('Delete the funeral of ' + d.event.deceased + ' and all its recorded payments?')) return;
+    var res = await call('mk_delete_funeral', { p_token: token, p_event_id: selectedEventId });
+    if(!res.ok){ showToast(res.error, 'error'); return; }
+    delete funeralDetails[selectedEventId];
+    selectedEventId = null;
+    funeralEvents = null;
+    await renderActiveTable();
+    showToast('Funeral event deleted.', 'ok');
   });
 
   /* ---------- WEEKLY MEETING PROCEEDINGS ---------- */
